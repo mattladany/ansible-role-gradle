@@ -1,2 +1,16 @@
 ---
-# tasks file for ansible-role-gradle
+# tasks file for installing gradle
+
+- include_tasks: "{{ ansible_os_family }}.yml"
+
+- name: Download and unarchive gradle
+  unarchive:
+    src: "{{ gradle_download_url }}"
+    dest: "{{ gradle_install_dir }}"
+    remote_src: yes
+
+- name: Add gradle bin to PATH
+  copy:
+    dest: "/etc/profile.d/gradle-path.sh"
+    content: "PATH=$PATH:{{ gradle_bin_path }}"
+    mode: 0744

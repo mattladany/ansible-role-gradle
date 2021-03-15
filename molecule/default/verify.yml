@@ -1,0 +1,8 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Get gradle version
+      shell: source /etc/profile.d/gradle-path.sh && gradle --version
+      register: result
+      changed_when: false

@@ -1,2 +1,15 @@
 ---
-# defaults file for ansible-role-gradle
+# defaults file for installing gradle
+
+# The version of gradle to install
+gradle_version: 6.8.3
+
+# Where the gradle zip should be unpacked to
+gradle_install_dir: "/opt"
+
+# The path to gradle's bin directory
+gradle_bin_path: "{{ gradle_install_dir }}/gradle-{{ gradle_version }}/bin"
+
+# The download URL for binary-only gradle files
+gradle_download_url: "https://services.gradle.org/distributions/\
+                                  gradle-{{ gradle_version }}-bin.zip"

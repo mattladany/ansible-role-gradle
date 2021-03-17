@@ -24,6 +24,8 @@ jobs:
           python-version: '3.x'
       - name: Install test dependencies
         run: pip3 install ansible molecule[docker] docker yamllint ansible-lint
+      - name: Install Requirements
+        run: sudo ansible-galaxy install -r molecule/default/requirements.yml
       - name: Run molecule test
         run: molecule test
         env:

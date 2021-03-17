@@ -5,11 +5,11 @@
 
 An Ansible role that manually installs [gradle](https://gradle.org) on Centos Linux.
 
-# Requirements
+## Requirements
 
 Requires Java; recommended role for Java installation: `geerlingguy.java`.
 
-# Role Variables
+## Role Variables
 
 Available variables are listed below, along with their default values (see ```defaults/main.yml```):
 
@@ -29,23 +29,23 @@ The path to gradle's bin directory. Should not be changed.
 
 The URL of which the gradle zip should be downloaded from. Should not be changed.
 
-# Dependencies
+## Dependencies
 
 None.
 
-# Example Playbook
+## Example Playbook
 
 ```yaml
 - hosts: all
-    roles:
-      - geerlingguy.java
-      - mattladany.gradle
+  roles:
+    - geerlingguy.java
+    - mattladany.gradle
 ```
 
-# License
+## License
 
 [MIT](https://raw.githubusercontent.com/mattladany/ansible-role-gradle/master/LICENSE)
 
-# Author Information
+## Author Information
 
 This role was created by Matt Ladany.

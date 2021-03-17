@@ -1,7 +1,2 @@
 ---
-- name: Requirements
-  hosts: all
-  tasks:
-    - name: "Include geerlingguy.java"
-      include_role:
-        name: "geerlingguy.java"
+- src: geerlingguy.java

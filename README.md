@@ -1,38 +1,51 @@
-Role Name
-=========
+# Ansible Role - Gradle
 
-A brief description of the role goes here.
+![CI](https://github.com/mattladany/ansible-role-gradle/actions/workflows/ci.yml/badge.svg)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/mattladany/ansible-role-gradle/master/LICENSE)
 
-Requirements
-------------
+An Ansible role that manually installs [gradle](https://gradle.org) on Centos Linux.
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+# Requirements
 
-Role Variables
---------------
+Requires Java; recommended role for Java installation: `geerlingguy.java`.
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+# Role Variables
 
-Dependencies
-------------
+Available variables are listed below, along with their default values (see ```defaults/main.yml```):
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+```gradle_version: 6.3.8```
 
-Example Playbook
-----------------
+Set this to the version of gradle you would like to install. See [here](https://gradle.org/releases/) for a list of gradle releases.
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+```gradle_install_dir: /opt```
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+Where the gradle zip should be unpacked to.
 
-License
--------
+```gradle_bin_path: "{{ gradle_install_dir }}/gradle-{{ gradle_version }}/bin```
 
-BSD
+The path to gradle's bin directory. Should not be changed.
 
-Author Information
-------------------
+```gradle_download_url: "https://services.gradle.org/distributions/gradle-{{ gradle_version }}-bin.zip"```
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+The URL of which the gradle zip should be downloaded from. Should not be changed.
+
+# Dependencies
+
+None.
+
+# Example Playbook
+
+```yaml
+- hosts: all
+    roles:
+      - geerlingguy.java
+      - mattladany.gradle
+```
+
+# License
+
+[MIT](https://raw.githubusercontent.com/mattladany/ansible-role-gradle/master/LICENSE)
+
+# Author Information
+
+This role was created by Matt Ladany.

@@ -2,6 +2,9 @@
 - name: Converge
   hosts: all
   tasks:
+    - name: "Include geerlingguy.java"
+      include_role:
+        name: "geerlingguy.java"
     - name: "Include ansible-role-gradle"
       include_role:
         name: "ansible-role-gradle"

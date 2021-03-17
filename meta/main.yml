@@ -2,7 +2,7 @@
 galaxy_info:
   role_name: gradle
   author: mattladany
-  description: Download gradle and add binaries to $PATH
+  description: Download gradle and add its binaries to $PATH
   license: license (MIT)
   min_ansible_version: 2.4
   platforms:

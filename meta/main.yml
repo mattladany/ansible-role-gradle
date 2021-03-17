@@ -1,8 +1,8 @@
 ---
 galaxy_info:
   role_name: gradle
-  author: Matt Ladany
-  description: Download gradle and add to PATH
+  author: mattladany
+  description: Download gradle and add binaries to $PATH
   license: license (MIT)
   min_ansible_version: 2.4
   platforms:
@@ -14,6 +14,3 @@ galaxy_info:
     - gradle
     - java
     - build
-
-dependencies:
-  - geerlingguy.java

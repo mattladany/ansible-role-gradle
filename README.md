@@ -7,7 +7,8 @@ An Ansible role that manually installs [gradle](https://gradle.org) on Centos Li
 
 ## Requirements
 
-Requires Java; recommended role for Java installation: `geerlingguy.java`.
+- unzip - will be installed using the OS default package manager.
+- Java - recommended role for Java installation: `geerlingguy.java`.
 
 ## Role Variables
 
@@ -24,10 +25,6 @@ Where the gradle zip should be unpacked to.
 ```gradle_bin_path: "{{ gradle_install_dir }}/gradle-{{ gradle_version }}/bin```
 
 The path to gradle's bin directory. Should not be changed.
-
-```gradle_download_url: "https://services.gradle.org/distributions/gradle-{{ gradle_version }}-bin.zip"```
-
-The URL of which the gradle zip should be downloaded from. Should not be changed.
 
 ## Dependencies
 

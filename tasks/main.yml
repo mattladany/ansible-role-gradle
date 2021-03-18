@@ -5,7 +5,8 @@
 
 - name: Download and unarchive gradle
   unarchive:
-    src: "{{ gradle_download_url }}"
+    src: "https://services.gradle.org/distributions/\
+          gradle-{{ gradle_version }}-bin.zip"
     dest: "{{ gradle_install_dir }}"
     remote_src: yes
 

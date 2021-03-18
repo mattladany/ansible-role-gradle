@@ -1,2 +1,8 @@
+# Temporary files
 *.swp
+
+# ansible cached files
 .cache
+
+# MacOS files
+.DS_Store

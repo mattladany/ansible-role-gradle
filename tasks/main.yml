@@ -13,5 +13,6 @@
 - name: Add gradle bin to PATH
   copy:
     dest: "/etc/profile.d/gradle-path.sh"
-    content: "PATH=$PATH:{{ gradle_bin_path }}"
+    content: "PATH=$PATH:{{ gradle_install_dir }}/\
+              gradle-{{ gradle_version }}/bin"
     mode: 0744

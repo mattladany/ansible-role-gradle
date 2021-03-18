@@ -6,6 +6,3 @@ gradle_version: 6.8.3
 
 # Where the gradle zip should be unpacked to
 gradle_install_dir: "/opt"
-
-# The path to gradle's bin directory
-gradle_bin_path: "{{ gradle_install_dir }}/gradle-{{ gradle_version }}/bin"

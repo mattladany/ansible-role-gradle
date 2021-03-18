@@ -3,7 +3,7 @@
 ![CI](https://github.com/mattladany/ansible-role-gradle/actions/workflows/ci.yml/badge.svg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/mattladany/ansible-role-gradle/master/LICENSE)
 
-An Ansible role that manually installs [gradle](https://gradle.org) on Centos Linux.
+A very simple ansible role that manually installs [gradle](https://gradle.org) on CentOS Linux.
 
 ## Requirements
 
@@ -21,10 +21,6 @@ Set this to the version of gradle you would like to install. See [here](https://
 ```gradle_install_dir: /opt```
 
 Where the gradle zip should be unpacked to.
-
-```gradle_bin_path: "{{ gradle_install_dir }}/gradle-{{ gradle_version }}/bin```
-
-The path to gradle's bin directory. Should not be changed.
 
 ## Dependencies
 
